@@ -1,0 +1,292 @@
+
+.billing_content {
+    background: var(--pink);
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    align-self: flex-start;
+}
+
+.billing_content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    height: 50px;
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.total_bal {
+    background: var(--violet);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.free-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8265d1;
+    border-radius: 14px;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+}
+
+.free-row .text {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.free-row .total {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:3px 20px;
+    line-height: 1.1;
+}
+
+.row .alpa {
+    margin: 4px 0 0 0;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.85;
+}
+
+.row .ttl {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.row .units {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.total_bal > h3 {
+    margin: 0 0 8px 15px;
+}
+
+.sub-row {
+    padding-left: 40px;
+}
+
+.free-row .apply {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ready {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.schol-bal-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cont {
+    display: flex;
+    gap: 20px;
+}
+
+.blc {
+    background: var(--violet);
+    color: white;
+    border-radius: 20px;
+    padding: 24px;
+    width: 200px;
+}
+
+.scho {
+    background: var(--pink);
+    color: white;
+    border-radius: 20px;
+    padding: 24px;
+    width: 200px;
+}
+
+.cont .bal-schol {
+    font-size: 13px;    
+    margin-bottom: 2px;
+}
+
+.cont .num {
+    font-size: 23px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.cont .sub {
+    font-size: 10px;
+    opacity: 0.85;
+    margin-bottom: 8px;
+}
+
+.select {
+    background: var(--violet);
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    align-self: flex-start;
+    padding: 10px 0 15px 0;
+    margin-top: 20px;
+}
+
+.select h3 {
+    font-size: 27px;
+    font-weight: bold;
+    align-items: center;
+    height: 50px;
+    padding: 12px 20px ;
+    margin: 0;
+}
+
+.method {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.methods {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.meths {
+    display: flex;
+    flex-direction: column;
+}
+
+.PM {
+    padding: 0 0 0 20px;
+}
+
+.method-row {
+    background: var(--violet);
+    padding: 10px 10px 2px 10px;
+    border-radius: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:340px;
+
+}
+
+.method-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8265d1;
+    border-radius: 14px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+
+.method-item .meth {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pay {
+    background: var(--violet);
+    color: white;
+    display: flex;
+    border-radius: 20px;
+    padding: 16px 20px;
+    width: 355px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.pay_now {
+    background: var(--pink);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 8px 28px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pay > div:last-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.info {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.payment_info{
+    padding: 0 20px 0 20px;
+    gap: 0;
+    margin: 0;
+}
+
+.text {
+    font-size: 18px;
+    opacity: 0.85;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.all_history {
+    background: var(--violet);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th {
+    font-size: 10px;
+    opacity: 0.7;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 6px 8px;
+}
+
+td {
+    padding: 9px 8px;
+}
+
+th td {
+    text-align: center;
+    align-items: center;
+}

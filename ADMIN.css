@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --violet: #6D28D9;
+    --pink: #EC4899;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 230px;
+    background: var(--violet);
+    color: white;
+    border-radius: 20px;
+    padding: 16px;
+}  
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.mark .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.navlist {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;   
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.75);
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.nav-item.active {
+  background: var(--pink);
+  color: white;
+}
+
+.app-shell {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 1300px;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.rightcool {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hello-block {
+    text-align: right;
+    font-size: 13px;
+    color: #8b7fa0;
+}
+
+.hello-block .student-name {
+    font-weight: bold;
+    color: #241a3a;
+    font-size: 14.5px;
+}
+
+.banner {
+    background: var(--violet);
+    color: white;
+    border-radius: 20px;
+    padding: 35px;
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 45px;
+}
+
+.recent-history {
+    background: var(--violet);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.recent-history h3 {
+    margin: 0 0 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th {
+    font-size: 10px;
+    opacity: 0.7;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 6px 8px;
+}
+
+td {
+    padding: 9px 8px;
+}
+
+th td {
+    text-align: center;
+    align-items: center;
+}
+
+.profile {
+    background: var(--violet);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.profile h3 {
+    margin: 8px 0 12px;
+}
+
+.pro {
+    background: var(--pink);
+    color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.types {
+    font-size: 13px;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+.announce {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.notice {   
+    background: var(--violet);
+    color: white;
+    border-radius: 20px;
+    padding: 15px 20px;   
+    min-height: auto;    
+}
+
+.notice h3 {
+    background: var(--pink);
+    color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.notice h4 {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    text-align: justify;
+    font-weight: normal;
+}
+
+.date {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.ftf {
+    background: #8265d1;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.oc {
+    background: #8265d1;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}   

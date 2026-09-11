@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SMS - PAYMENT MANAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="ADMIN.css">
+    <link rel="stylesheet" href="AdminBilling.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="mark">
+                    <img src="logo.png" class="logo">
+                </div>
+                <div class="section">3104 - NA</div>
+            </div>
+
+            <nav class="navlist">
+                <button class="nav-item active" data-page="dashboard">Dashboard</button>
+                <button class="nav-item" data-page="billing">Student Billing & Invoicing</button>
+                <button class="nav-item" data-page="fee">Fee Setup & Configuration</button>
+                <button class="nav-item" data-page="discount">Discount & Scholarship Application</button>
+                <button class="nav-item" data-page="history">Payment History & Ledger</button>
+                <button class="nav-item" data-page="collection">Collection Reports & Analytics</button>
+                <button class="nav-item" data-page="receive">Accounts Receivable Management</button>
+                <button class="nav-item" data-page="penalty">Penalty & Due Date Management</button>
+                <button class="nav-item" data-page="audit">Audit & Acess Control</button>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <div class="page" id="page-dashboard">
+                <div class="topbar">
+                    <h1>Welcome to PMS</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Admin</div>
+                    </div>
+                </div>
+
+                <div class="banner">
+                    <h2>Good day,  Admin!</h2>
+                </div>
+             
+                <div class="recent-history">
+                    <h3>Students History</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Student ID</td>
+                                    <td>Date</td>
+                                    <td>Type</td>
+                                    <td>Status</td>
+                                    <td>Amount</td>
+                                </tr>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td>2401112746</td>
+                                <td>08-25-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status">Pending</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2401173284</td>
+                                <td>07-11-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2401249573</td>
+                                <td>07-21-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status">Pending</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2402347174</td>
+                                <td>03-12-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status">Pending</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2419475914</td>
+                                <td>05-15-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2401112746</td>
+                                <td>08-25-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status">Pending</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2401173284</td>
+                                <td>07-11-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2401249573</td>
+                                <td>07-21-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status">Pending</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2402347174</td>
+                                <td>03-12-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status">Pending</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2419475914</td>
+                                <td>05-15-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>2401112746</td>
+                                <td>08-25-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status">Pending</td>
+                                <td>₱ 4,975.00</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="page hidden" id="page-billing">
+                <div class="topbar">
+                    <h1>Student Billing & Invoicing</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Admin</div>
+                    </div>
+                </div>
+                <div class="billing_content" id="billing-header">
+                    <h3>Student Billing Information</h3>
+                </div>
+
+                <div class="total_bal" id="student-list-view">
+                    <h3>1st Sem</h3>
+                    <div class="free-row">
+                        <p class="text">Julian Solo</p>
+                        <h3 class="total view-statement" onclick="openStatement('Julian Solo', 9000, 4975, 500, 2445)">View Statement</h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Maria Aremohanan</p>
+                        <h3 class="total view-statement" onclick="openStatement('Maria Aremohanan', 9000, 4975, 500, 2445)">View Statement</h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Jayson Carido</p>
+                        <h3 class="total view-statement" onclick="openStatement('Jayson Carido', 9000, 4975, 500, 2445)">View Statement</h3>
+                    </div>
+                    <div class="free-row">    
+                        <p class="text">Angelo De Jesus</p>
+                        <h3 class="total view-statement" onclick="openStatement('Angelo De Jesus', 9000, 4975, 500, 2445)">View Statement</h3>
+                    </div>
+                    <div class="free-row">    
+                        <p class="text">Chris Novelo</p>
+                        <h3 class="total view-statement" onclick="openStatement('Chris Novelo', 9000, 4975, 500, 2445)">View Statement</h3>
+                    </div>
+                </div>
+
+                <div class="total_bal hidden" id="statement-view">
+                    <h2 id="stmt-title">Billing statement</h2>
+                    <div class="free-row">
+                        <p class="text">Tuition Fee</p>
+                        <h3 class="total" id="stmt-tuition"></h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Miscellaneous Fee</p>
+                        <h3 class="total" id="stmt-misc"></h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Other School Fee</p>
+                        <h3 class="total" id="stmt-other"></h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Scholarship</p>
+                        <h3 class="total" id="stmt-discount"></h3>
+                    </div>
+                    <p class="back-link" onclick="closeStatement()">&larr; Back to student list </p>
+                </div>
+            </div>
+
+            <div class="page hidden" id="page-fee">
+                <div class="topbar">
+                    <h1>Fee Setup & Configuration</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Julian Solo</div>
+                    </div>
+                </div>
+                <div class="billing_content">
+                    <h3>Fee Structure - AY 25-26</h3>
+                </div>
+
+                <div class="total_bal">
+                    <h3>Total Balance - ₱ 13,975.00 (Each Sem)</h3>
+                    <div class="row">
+                        <p class="alpa">Tuition Fee</p>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">18 Units</p>
+                        <h3 class="ttl">₱ 9,000.00</h3>
+                    </div>
+                    <div class="row">
+                        <p class="alpa">Miscellaneous Fee</p>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Registration</p>
+                        <h3 class="ttl">₱ 400.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Library</p>
+                        <h3 class="ttl">₱ 650.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Athletics & Sports Dev Fee</p>
+                        <h3 class="ttl">₱ 500.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Cultural Fee</p>
+                        <h3 class="ttl">₱ 400.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Guidance & Counseling</p>
+                        <h3 class="ttl">₱ 400.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Energy Fee</p>
+                        <h3 class="ttl">₱ 1,000.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Laboratory Fee</p>
+                        <h3 class="ttl">₱ 600.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Community & Student Dev Fee</p>
+                        <h3 class="ttl">₱ 600.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Insurance</p>
+                        <h3 class="ttl">₱ 25.00</h3>
+                    </div>
+                    <div class="row sub-row">
+                        <p class="units">Medical & Dental</p>
+                        <h3 class="ttl">₱ 400.00</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="page hidden" id="page-discount">
+                <div class="topbar">
+                    <h1>Discount & Scholarship Application</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Julian Solo</div>
+                    </div>
+                </div>
+                <div class="billing_content">
+                    <h3>Discount & Scholarship Information</h3>
+                </div>
+
+                <div class="total_bal">
+                    <h3>Scholarship Grant</h3>
+                
+                    <div class="add-program-bar">
+                        <div class="field">
+                            <label for="program-name">Program name</label>
+                            <input type="text" id="program-name" placeholder="e.g. Dean's Lister Grant">
+                        </div>
+                        <div class="field">
+                            <label for="program-desc">Description</label>
+                            <input type="text" id="program-desc" placeholder="e.g. Eligibility note">
+                        </div>
+                        <div class="field">
+                            <label for="program-amount">Amount</label>
+                            <input type="text" id="program-amount" placeholder="e.g. 5000">
+                        </div>
+                        <button class="add-program-btn">Add program</button>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Academic Excellence</p>
+                        <h3 class="apply">₱ 4,975.00</h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Organization</p>
+                        <h3 class="apply">₱ 4,975.00</h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Mayors</p>
+                        <h3 class="apply">₱ 4,975.00</h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Varsity</p>
+                        <h3 class="apply">₱ 4,975.00</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page hidden" id="page-payment">
+                <div class="topbar">
+                    <h1>Payment</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Julian Solo</div>
+                    </div>
+                </div>
+                <div class="schol-bal-row">
+                    <h3 class="ready">Ready to pay your Balance?</h3>
+
+                    <div class="cont">
+                        <div class="blc">
+                            <div class="bal-schol">Total Balance</div>
+                            <div class="num">₱ 4,975.00</div>
+                            <div class="sub">First Semester</div>
+                        </div>
+
+                        <div class="scho">
+                            <div class="bal-schol">Scholarship Grant</div>
+                            <div class="num">₱ 4,975.00</div>
+                            <div class="sub">Academic Exellence</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method">
+                    <div class="methods">   
+                        <div class="meths">
+                            <div class="select">
+                                <h3>Select Payment Method</h3>
+                            </div>
+                            <h3 class="PM">Payment Method:</h3>
+
+                           <div class="method-row">
+                                <div class="method-item">
+                                    <p class="meth">E-Wallet</p>
+                                </div>
+                                <div class="method-item">
+                                    <p class="meth">Debit Card</p>
+                                </div>
+                                <div class="method-item" >
+                                    <p class="meth">Credit Card</p>
+                                </div>
+                                <div class="method-item" >
+                                    <p class="meth">Cryptocurrency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pay">
+                        <div class="info">
+                            <h3 class="payment_info">Payment Information</h3>
+                            <p class="text">Institution: Bestlink College of the Philippines</p>
+                            <p class="text">Account Name: Julian Solo</p>
+                            <p class="text">Student Name: Julian Solo</p>
+                            <p class="text">Student Number: 1234567890</p>
+                            <p class="text">Other Details: Research Festival</p>
+                            <p class="text">Amount: ₱ 4,975.00</p>
+                        </div>
+                        <div>
+                             <p class="pay_now">Pay Now</p>
+                        </div>
+                   </div>
+                </div>  
+            </div>  
+            
+            <div class="page hidden" id="page-history">
+                <div class="topbar">
+                    <h1>Payment History & Ledger</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Julian Solo</div>
+                    </div>
+                </div>
+                <div class="billing_content">
+                    <h3>Students History</h3>
+                </div>
+
+                <div class="all_history">
+                    <div class="bg-form">
+                        <div class="txn-form-card">
+                            <div class="txn-row">
+                                <div class="txn-field">
+                                    <label for="txn-name">Student Name</label>
+                                    <input type="text" id="txn-name" placeholder="Full name">
+                                </div> 
+                                <div class="txn-field">
+                                    <label for="txn-id">Student ID</label>
+                                    <input type="text" id="txn-id" placeholder="ID number">
+                                </div>
+                                <div class="txn-field">
+                                    <label for="txn-type">Type</label>
+                                    <select id="txn-type">
+                                        <option>Tuition Fee</option>
+                                        <option>Miscellaneous Fee</option>
+                                        <option>Laboratory Fee</option>
+                                        <option>Other School Fee</option>
+                                    </select>
+                                </div>
+                                <div class="txn-field">
+                                    <label for="txn-amount">Amount</label>
+                                    <input type="text" id="txn-amount" placeholder="e.g. 5000">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="txn-row txn-row-bottom">
+                            <div class="txn-field txn-status-field">
+                                <label for="txn-status">Status</label>
+                                <select id="txn-status">
+                                    <option>Accepted</option>
+                                    <option>Pending</option>
+                                </select>
+                            </div>  
+                            <button class="txn-add-btn">Add transaction</button>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Student</td>
+                                <td>Student ID</td>
+                                <td>Date</td>
+                                <td>Type</td>
+                                <td>Status</td>
+                                <td>Amount</td>
+                            </tr>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td>Julian Solo</td>
+                                <td>2401112746</td>
+                                <td>08-25-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Maria Aremohanan</td>
+                                <td>2401173284</td>
+                                <td>07-11-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Jayson Carido</td>
+                                <td>2401249573</td>
+                                <td>07-21-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                            <td>Angelo De Jesus</td>
+                                <td>2402347174</td>
+                                <td>03-12-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Chris Novelo</td>
+                                <td>2419475914</td>
+                                <td>05-15-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Jay Catacte</td>
+                                <td>2401249573</td>
+                                <td>07-21-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Glen Agojeto</td>
+                                <td>2402347174</td>
+                                <td>03-12-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Cliff Redula</td>
+                                <td>2419475914</td>
+                                <td>05-15-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="page hidden" id="page-collection">
+                <div class="topbar">
+                    <h1>Collection Reports & Analytics</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Admin</div>
+                    </div>
+                </div>
+                <div class="billing_content" id="billing-header">
+                    <h3>Collection Summary</h3>
+                </div>
+
+                <div class="bal-schol-row">
+                    <div class="balance">
+                        <div class="bal-schol">Total Collected</div>
+                        <div class="num">₱ 4,975.00</div>
+                        <div class="sub">5 Accepted Transactions</div>
+                    </div>
+
+                    <div class="scholarship">
+                        <div class="bal-schol">Pending Collections</div>
+                        <div class="num">₱ 4,975.00</div>
+                        <div class="sub">1 Pending Transaction</div>
+                    </div>
+                </div>
+
+                <div class="collections-card">
+                    <h3>Daily collections</h3>
+
+                    <div class="collection-row">
+                        <span class="col-date">03-20-26</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 100%;"></div>
+                        </div>
+                        <span class="col-amount">₱17,820</span>
+                    </div>
+
+                    <div class="collection-row">
+                        <span class="col-date">02-18-26</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 33%;"></div>
+                        </div>
+                        <span class="col-amount">₱5,940</span>
+                    </div>
+
+                    <div class="collection-row">
+                        <span class="col-date">03-19-26</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 67%;"></div>
+                        </div>
+                        <span class="col-amount">₱12,000</span>
+                    </div>
+
+                    <div class="collection-row">
+                        <span class="col-date">03-18-26</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 25%;"></div>
+                        </div>
+                        <span class="col-amount">₱4,500</span>
+                    </div>
+                    <button class="export-btn">Export financial summary (CSV)</button>
+                </div>
+            </div>
+
+            <div class="page hidden" id="page-receive">
+                <div class="topbar">
+                    <h1>Account Receivable Management</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Admin</div>
+                    </div>
+                </div>
+                <div class="billing_content" id="billing-header">
+                    <h3>Account Balances</h3>
+                </div>
+                <div class="summary">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Student</td>
+                                <td>Student ID</td>
+                                <td>Date</td>
+                                <td>Type</td>                                
+                                <td>Status</td>
+                                <td>Amount</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Julian Solo</td>
+                                <td>2401112746</td>                                
+                                <td>08-25-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Maria Aremohanan</td>
+                                <td>2401173284</td>
+                                <td>07-11-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Jayson Carido</td>
+                                <td>2401249573</td>
+                                <td>07-21-26</td>
+                                <td>Miscellaneous Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Angelo De Jesus</td>
+                                <td>2402347174</td>
+                                <td>03-12-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                            <tr>
+                                <td>Chris Novelo</td>
+                                <td>2419475914</td>
+                                <td>05-15-26</td>
+                                <td>Tuition Fee</td>
+                                <td class="status-acc">Accepted</td>
+                                <td>₱ 4,975.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="page hidden" id="page-penalty">
+                <div class="topbar">
+                    <h1>Penalty & Due Date Management</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Admin</div>
+                    </div>
+                </div>
+                <div class="billing_content" id="billing-header">
+                    <h3>Penalties & Due Dates</h3>
+                </div>
+                <div class="penal">
+                    <div class="add-type-bar">
+                        <div class="joint">
+                            <label for="type-name">Fee Type</label>
+                            <input type="text" id="type-name" placeholder="e.g. Laboratory Fee">
+                        </div>
+                        <div class="joint">
+                            <label for="type-date">Due date</label>
+                            <input type="text" id="type-date" placeholder="e.g. 2026-12-31">
+                        </div>
+                        <div class="joint">
+                            <label for="type-number">Grace days</label>
+                            <input type="text" id="type-number" placeholder="e.g. 7">
+                        </div>
+                        <div class="joint">
+                            <label for="type-amount">Penalty amount</label>
+                            <input type="text" id="type-amount" placeholder="e.g. 100">
+                        </div>
+                        <button class="add-type-btn">Add penalty</button>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Tuition Fee </p>
+                        <h3 class="apply">₱ 4,975.00</h3>
+                    </div>
+                    <div class="free-row">
+                        <p class="text">Miscellaneous Fee</p>
+                        <h3 class="apply">₱ 4,975.00</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page hidden" id="page-audit">
+                <div class="topbar">
+                    <h1>Audit & Access Control</h1>
+                    <div class="hello-block">
+                        <div>Hello!</div>
+                        <div class="student-name">Admin</div>
+                    </div>
+                </div>
+                <div class="billing_content" id="billing-header">
+                    <h3>Activity Log</h3>
+                </div>
+                <div class="audit">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Time </td>
+                                <td>Date</td>
+                                <td>Actor</td>
+                                <td>Action</td>                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>11:00 PM</td>
+                                <td>11-23-26</td>                                
+                                <td>Admin</td>
+                                <td>Sent payment reminder to Julian Solo</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 PM</td>
+                                <td>11-23-26</td>                                
+                                <td>Admin</td>
+                                <td>Sent payment reminder to Julian Solo</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 PM</td>
+                                <td>11-23-26</td>                                
+                                <td>Admin</td>
+                                <td>Sent payment reminder to Julian Solo</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 PM</td>
+                                <td>11-23-26</td>                                
+                                <td>Admin</td>
+                                <td>Sent payment reminder to Julian Solo</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 PM</td>
+                                <td>11-23-26</td>                                
+                                <td>Admin</td>
+                                <td>Sent payment reminder to Julian Solo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <aside class="rightcool">
+            <div class="profile">
+                <div class="pro">My Profile</div>
+                <h3>Admin</h3>
+                <div class="types">Admin Type: Continuing</div>
+                <div class="types">Admin ID: 2401112746</div>
+            </div>
+            
+            <div class="notice">
+                <h3>Notice Board</h3>
+                <div class="poster">
+                    <div class="announce">Annoucement</div>
+                    <div class="ftf">
+                        <h4>Resumption of face-to-face classes at Quezon City Campus</h4>
+                        <div class="date">August 22, 2026</div>
+                    </div>
+                    <div class="oc">
+                        <h4>Cancellation of face-to-face classes at Quezon City Campus</h4>
+                        <div class="date">August 19, 2026</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="ADMIN.js"></script>
+</body>
+
+</html>
